@@ -17,7 +17,7 @@ html, body {
 .frame {
   background-image: url('http://2.bp.blogspot.com/-UlACKu2VI9s/UXmRY0URecI/AAAAAAAAAdI/trr2LPQfkWY/s1600/Story_Bridge_Panorama.jpg');
   background-size: cover;
-  height: 80%; 
+  height: 85%; 
   width: 100%;
   text-align:center;
   color: white;
@@ -49,6 +49,22 @@ html, body {
   letter-spacing: 0.2em;
   -webkit-transform: translateY(-50%);
   -webkit-transform: scale(.5);
+}
+
+.frame a img{
+  position: relative;
+  left: -10%;
+  bottom: -10%;
+  max-width: 80px;
+  max-height: 80px;
+  z-index:1;
+
+}
+
+..frame a img:hover{
+  color: yellow;
+  z-index:1;
+
 }
 
 .frame .centered {
@@ -106,5 +122,5 @@ html, body {
   -webkit-transform: none;
 }
 /**
----------------------------------------------------------------------- WARM OSCAR
+---------------------------------------------------------------------- 
 **/

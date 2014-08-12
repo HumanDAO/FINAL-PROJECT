@@ -7,10 +7,10 @@
     <title>kubika.me</title>
 
     <!-- MODERNIZR acts as a shim for HTML5 elements that older browsers may not recognize, and provides detection for mobile devices: -->
-    <script src="./js/vendor/modernizr.js"></script>
+    <script src="./js/library/modernizr.js"></script>
     <!-- CSS Assets -->
-    <link rel="stylesheet" type="text/css" href="./stylesheets/normalize.css">
-    <link rel="stylesheet" type="text/css" href="./stylesheets/typeplate.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/default/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/default/typeplate.css">
     <!-- Google API Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
     <!-- Manual CSS -->
@@ -63,9 +63,9 @@
         <div class="searchbox">
             <form>
                 <span>
-                    <input type="text" class="Search" autofocus placeholder="TIPO DE RESIDENCIA">
+                    <input type="text" class="Search" autofocus placeholder="Local, Tipo, Bairro">
                     <a href="./listing_page.html">
-                        <input type="button" value="BUSCAR">
+                        <input type="button" value="           "><img src="./img/icon/icon_52257.png" alt="">
                     </a>
                 </span>
             </form>
@@ -88,39 +88,37 @@
 
     <!-- Location Map -->
 
-    <div class="map">
-        <!-- <iframe width="100%" height="600px" frameborder="1" style="border:1" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCOFyJ7EQ7kHMYTIVHeA9JvaGiyjGHqNkI&q=Start+Houston,Houston+TX"></iframe> -->
+    <div id="map">
+        <iframe width="100%" height="600px" frameborder="1" style="border:1" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCOFyJ7EQ7kHMYTIVHeA9JvaGiyjGHqNkI&q=Start+Houston,Houston+TX"></iframe>
     </div>
 
 
     <!-- Marketing Section -->
 
     <div class="marketing">
-        <div class="imgsection">
-            <div class="sub">
-                <h2>Alugar</h2>
-                <img src="http://www.timticks.com/wp-content/uploads/antique-russian-apartment-living-room-idea.jpg">
-                <h3>Comprar ou Alugar?</h3>
-                <p>Nao tens a certeza se queres alugar ou comprar?Nos podemos ajudar-te a tomar a decisao correcta.</p>
-                <p><a href="#">Compara os custos</a>
-                </p>
-            </div>
-            <div class="sub">
-                <h2>Comprar</h2>
-                <img src="http://freethinkernews.com/wp-content/uploads/2013/06/Gsovski-2-1.jpg">
-                <h3>Procura como se estivesses no local</h3>
-                <p>Obtenha uma idea sobre escolas, crime, e mesmo lojas, gimnasios ou oficina mais perto.</p>
-                <p><a href="#">Explora mais</a>
-                </p>
-            </div>
-            <div class="sub">
-                <h2>Vender</h2>
-                <img src="http://cdn.boutique-homes.com/wp-content/uploads/modern-vacation-rentals-iceland-STYLE.jpg">
-                <h3>Prepara-te para vender</h3>
-                <p>Descubra ja o valor da sua vivenda ou apartamento e connecte-se com um agencia immmobiliaria.</p>
-                <p><a href="#">Obtenha uma estimativa gratuita</a>
-                </p>
-            </div>
+        <div class="sub">
+            <h2>Alugar</h2>
+            <img src="http://www.timticks.com/wp-content/uploads/antique-russian-apartment-living-room-idea.jpg">
+            <h3>Comprar ou Alugar?</h3>
+            <p>Nao tens a certeza se queres alugar ou comprar?Nos podemos ajudar-te a tomar a decisao correcta.</p>
+            <p><a href="#">Compare custos</a>
+            </p>
+        </div>
+        <div class="sub">
+            <h2>Comprar</h2>
+            <img src="http://cache3.asset-cache.net/gc/466467739-apartment-building-gettyimages.jpg?v=1&c=IWSAsset&k=2&d=lTPq8xcbBbvMZAfbbsOdp6gv%2F26w%2B%2B0u%2FCP%2FX6QGChc%3D">
+            <h3>Procura como se estivesses no local</h3>
+            <p>Obtenha uma idea sobre escolas, crime, e mesmo lojas, gimnasios ou oficina mais perto.</p>
+            <p><a href="#">Explore mais</a>
+            </p>
+        </div>
+        <div class="sub">
+            <h2>Vender</h2>
+            <img src="http://cdn.boutique-homes.com/wp-content/uploads/modern-vacation-rentals-iceland-STYLE.jpg">
+            <h3>Prepara-te para vender</h3>
+            <p>Descubra ja o valor da sua vivenda ou apartamento e connecte-se com um agencia immmobiliaria.</p>
+            <p><a href="#">Estimativa gratuita</a>
+            </p>
         </div>
     </div>
 
@@ -142,8 +140,8 @@
 
 
     <!-- JAVASCRIPTS GO HERE -->
-    <script src="./js/vendor/jquery.js"></script>
-<!--<script src="./js/foundation.nav.js"></script>
+    <script src="./js/library/jquery.js"></script>
+    <!--<script src="./js/foundation.nav.js"></script>
     <script src="./js/foundation/foundation.js"></script>
     <script src="./js/vendor/fastclick.js"></script>
     <script src="./js/foundation.min.js"></script>

@@ -7,11 +7,12 @@ body, html {
     margin: 0;
     padding: 0;
 }
+
 * a {
     text-decoration: none;
-    font-size: 18px;
+    font-size: 15px;
     color: blue;
-    font-weight: 900;
+    font-weight: 700;
 }
 @font-face {
     font-family: LogoFont;
@@ -33,7 +34,7 @@ body, html {
     font-family: "Trebuchet MS", serif;
     font-size: 3rem;
     font-weight: 600;
-    color: #ce3429;
+    /*color: #ce3429;*/
     margin-top: 10px;
     text-align: center;
     -webkit-animation: Login 5s infinite forwards ease;
@@ -51,18 +52,25 @@ body, html {
 
 .nav {
     width: 100%;
-    /*padding: 10px;*/
     border-bottom: 1px solid yellow;
     -webkit-box-shadow: 0px 5px 10px -4px rgba(255,28,28,0.75);
     background-image: url('./img/cubes.png');
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+.nav a{
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 .nav ul{
     display: inline;
+    /*padding: 0 0 0 0;*/
 }
 
 .nav ul li{
-
     display: inline-block;
     margin-right: 20px;
     padding: 10px;
@@ -70,18 +78,12 @@ body, html {
     /*-webkit-box-shadow: 0px 5px 10px -4px rgba(255,28,28,0.75);*/
 }
 
-.nav li a {
-    color: #5a5a5a;
-    font-size: 0.6rem;
-    font-weight: 800;
-    padding: 0px 10px;
-    font-family: 'Open Sans', sans-serif;
-    text-transform: uppercase;
-    z-index: 1;
+.nav .container .pull-right{
+    padding-left: 45%;
 }
 
-.nav .container .pull-right{
-    padding-left: 50%;
+.pull-right > a:nth-of-type(1){
+    background: #51ff47;
 }
 
 .nav ul li img{
@@ -94,7 +96,7 @@ body, html {
 }
 
 .nav ul li:hover{
-    background-color: #fff78a;
+    background-color: #ffff8a;
     -webkit-box-shadow: 0px 0px 20px -4px rgba(9, 184, 0, 1);
 }
 
@@ -109,15 +111,16 @@ body, html {
 /* SEARCH BOX */
 
 .searchbox {
-    padding: 20px;
-    width: 50%;
+    padding: 10px;
+    margin: 0 auto;
+    width: 75%;
     border-radius: 10px;
-    background-size: cover;
-    background-color: -webkit-linear-gradient(top, #e4f1f9 0%, grey 100%);
-    bottom: -10%;
+    font-family: 'Helvetica', sans-serif;
+    left: 12.5%;
+    bottom: -22%; /* CRAPPY SITUATION HERE NEED TO RESOLVE THIS */
     border: 4px solid white;
     position: absolute; /* When absolute taken out, top of mainblock background gives space for searcbox!!*/
-    -webkit-transform: translateX(50%) translateY(-50%);
+    -webkit-transform: translateY(-50%);
     letter-spacing: -.025em;
     line-height: 1.5em;
     z-index: 1;
@@ -126,13 +129,14 @@ body, html {
 
 .searchbox input[type=text] {
     width: 75%;
-    border: 2px solid grey;
+ /*   border: 2px solid grey;*/
     background: -webkit-linear-gradient(top, #e4f1f9 0%, yellow 100%);
     color: #2369b3;
-    font-size: 20px;
+    font-size: 30px;
     padding: 20px 20px;
     text-align: center;
     text-transform: capitalize;
+    border: none;
 }
 
 /* Placeholder styling */
@@ -145,21 +149,22 @@ body, html {
 /* ****************** */
 
 .searchbox input[type=button] {
-    border: 2px solid grey;
+    display: inline-block;
+    padding: 20px 20px;
+    vertical-align: center;
     background: -webkit-linear-gradient(top, #e4f1f9 0%, yellow 100%);
     color: black;
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 30px;
+    font-weight: 500;
     padding: 20px 5px;
-    border-radius: 20px;
+    border: none;
 }
 
 input[type=text]:focus {
     background: yellow;
 }
 input[type=button]:hover {
-    left: -6px;
-    border: 2px solid yellow;
+    border-left: 4px solid yellow;
     background: black;
     color: yellow;
     cursor: pointer;
@@ -168,21 +173,23 @@ input[type=button]:hover {
 /* MAP SECTION w/ BOOTSTRAP FRAMEWORK */
 
 .neighborhood {
-    display: inline-flex;
+    font-family: 'Open Sans', serif;
+    display: inline-block;
+    background-image: url('./img/img3.jpg'); /* IMAGE NOT LOADING */
     width: 100%;
-    padding: 50px 50px 50px 50px;
-    /*text-align: center;*/
+    padding: 150px;
+    display: inline-flex; /* NOT SUPPORTED ACROSS MULTIPLE WEB-BROWSERS */
+    border-bottom: 2px dotted yellow;
+    -webkit-box-shadow: 5px 5px 10px 0px rgba(100,28,28,0.75);
 }
 
 .neighborhood .sub{
-    padding: 10vh;
+    padding: 0px 50px;
 }
 
 .neighborhood h2 {
-    font-family: 'Open Sans', serif;
     font-size: 40px;
     color: #393C3D;
-    /*text-align: center;*/
     font-weight: 600;
     letter-spacing: .03em;
 }
@@ -191,55 +198,75 @@ input[type=button]:hover {
     color: #393C3D;
 }
 
-/* MARKETING SECTION */
-
-.marketing {
-    background: -webkit-linear-gradient(top, #e4f1f9 0%, #f7f7f7 100%);
-}
-
-.marketing h2 {
-    font-family: 'Open Sans', serif;
-    font-size: 25px;
-    color: #393C3D;
-}
-
-.marketing h3 {
-    font-family: 'Open Sans', serif;
-    font-size: 18px;
-    font-weight: bold;
-}
-.marketing a {
+.neighborhood a {
+    font-size: 20px;
     color: #00b0ff;
 }
 
-.imgsection .sub {
+.neighborhood a:hover{
+    text-decoration:overline;
+}
+
+/* MARKETING SECTION */
+
+.marketing {
+    width: 100%;
+    height: 100vh;
+    /*background: -webkit-linear-gradient(top, #f4fff9 0%, #ffffff 100%);*/
+    font-family: 'Open Sans', serif;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.marketing h2 {
+    padding-bottom: 30px;
+    text-transform: uppercase;
+    font-size: 25px;
+    color: #393C3D;
+}
+.marketing h3 {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.marketing p {
+    padding: 0px 30px 30px 30px;
+    font-family: 'Helvetica', sans-serif;
+    letter-spacing: 0.5px;
+    line-height: 1.5em;
+}
+.marketing a {
+    color: #00b0ff;
+    text-align: center;
+}
+.marketing a:hover{
+    text-decoration:overline;
+}
+.marketing .sub {
     display: inline-block;
-    width: 25%;
+    width: 30%;
     padding: 0 20px 50px 0;
     text-align: center;
     vertical-align: top;
 }
-.imgsection ul li {
-    padding: 0px 10px 0px 0px;
-}
-.imgsection .sub p {
-    font-family: 'Helvetica', sans-serif;
-    letter-spacing: 1px;
-    line-height: 20px;
-    /*text-align: justify;*/
-}
-.imgsection .sub img {
+
+.marketing .sub img {
+    padding: 10px;
     border-radius: 120px;
-    border: 6px solid yellow;
+    border: 2px solid grey;
     width: 250px;
     height: 250px;
 }
 
-/* BOTTOM SECTION */
+.marketing .sub img:hover {
+    width: 255px;
+    height: 255px;
+}
+/* OTHER SECTION */
 
 .bottom {
     width: 100%;
-    background-color: yellow;
     border-top: 2px solid grey;
     line-height: 40px;
     text-align: center;
@@ -262,7 +289,62 @@ input[type=button]:hover {
     margin: 0 auto;
     text-align: center;
     padding: 10px 0px;
-    font-family: 'Arial', serif;
+    font-family: 'Trebuchet MS', serif;
     letter-spacing: 1px;
     color: darkgrey;
+}
+
+/* MEDIA QUERIES */
+
+.grid {
+    font-size: 0.1px;
+    /*hide whitespace between elements*/
+    text-align: justify;
+}
+.grid:after {
+    display: inline-block;
+    width: 50%;
+    content:'';
+}
+.grid > * {
+    font-size: 16px;
+    font-size: 1rem;
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    transition: all .25s ease;
+}
+
+@media (min-width: 480px) {
+    .grid-2-480 > * {
+        width: 48%;
+    }
+}
+@media (min-width: 800px) {
+    .grid-2-800 > * {
+        width: 48%;
+    }
+    .grid-3-800 > * {
+        width: 30%;
+    }
+}
+@media (min-width: 1024px) {
+    .grid-2-1024 > * {
+        width: 48%;
+    }
+    .grid-3-1024 > * {
+        width: 30%;
+    }
+}
+
+/* ---------------- animations */
+ @keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(2em);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
